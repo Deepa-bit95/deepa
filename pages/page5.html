@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME PROFILE</title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #2E7D32;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .logout {
+            background-color: white;
+            color: #2E7D32;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .container {
+            width: 50%;
+            background: white;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Footer */
+        .disclaimer-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2e7d32; /* Green color */
+            color: white;
+            font-weight: bold;
+            padding: 15px 50px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #256b2a; /* Slightly darker green */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="images/c6cafy-high-resolution-logo.png" alt="C6Cafy Logo" height="100" width="100">
+
+        <div>
+            <a href="#">My Carbon Footprint</a>
+            <a href="#">Trends</a>
+            <a href="#">Calculator</a>
+        </div>
+        <button class="logout">Log Out</button>
+    </div>
+
+    <div class="container">
+        <h2>SME PROFILE</h2>
+        <div class="form-group">
+            <label for="email ">EMAIL ID</label>
+            <input type="text"placeholder="ashleygeorge@soubry.com">
+        </div>
+        <div class="form-group">
+            <label for="password">PASSWORD</label>
+            <input type="text" id="PASSWORD" placeholder="ash123">
+        </div>
+        <div class="form-group">
+            <label for="total carbon footprint">TOTAL CARBON FOOTPRINT (Kg CO2e)</label>
+            <input type="number"placeholder="3.2 Kg CO2e">
+        </div>
+        <div>
+         <button class="button">RESET PASSWORD</button>
+        </div>
+         <div class="form-group">
+            <label for="new password ">NEW PASSWORD</label>
+            <input type="text"placeholder="geo234">
+        </div>
+        <div class="form-group">
+            <label for="password">RETYPE NEW PASSWORD</label>
+            <input type="text" id="PASSWORD" placeholder="geo234">
+        </div>
+         <div>
+         <button class="button">RESET</button>
+        </div>
+    </div>
+    </main>
+     <!-- Footer -->
+     <footer class="disclaimer-footer">
+        Disclaimers - The data of the SME will be deleted by the administrator annually
+    </footer>
+</body>
+</html>
