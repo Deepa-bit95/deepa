@@ -86,12 +86,12 @@
 </head>
 <body>
     <div class="navbar">
-        <img src="images/c6cafy-high-resolution-logo.png" alt="C6Cafy Logo" height="100" width="100">
+        <img src="/images/c6cafy-high-resolution-logo.png" alt="C6Cafy Logo" height="100" width="100">
 
         <div>
-            <a href="#">My Carbon Footprint</a>
-            <a href="#">Trends</a>
-            <a href="#">Calculator</a>
+            <a href="my_footprint.html">My Carbon Footprint</a>
+            <a href="trends.html">Trends</a>
+            <a href="carbon_calculator.html">Calculator</a>
         </div>
         <button class="logout">Log Out</button>
     </div>
@@ -110,25 +110,21 @@
             <label for="total carbon footprint">TOTAL CARBON FOOTPRINT (Kg CO2e)</label>
             <input type="number"placeholder="3.2 Kg CO2e">
         </div>
-        <div>
-         <button class="button">RESET PASSWORD</button>
-        </div>
-         <div class="form-group">
-            <label for="new password ">NEW PASSWORD</label>
-            <input type="text"placeholder="geo234">
-        </div>
-        <div class="form-group">
-            <label for="password">RETYPE NEW PASSWORD</label>
-            <input type="text" id="PASSWORD" placeholder="geo234">
-        </div>
          <div>
-         <button class="button">RESET</button>
+         <button class="button">RESET PASSWORD</button>
+              <a href="reset_password.html"></a>
         </div>
     </div>
     </main>
+    <script>
+        // Logout functionality
+        document.querySelector('.logout-btn').addEventListener('click', function() {
+            window.location.href = 'login_page.html';
+        });
+    </script>
      <!-- Footer -->
      <footer class="disclaimer-footer">
-        Disclaimers - The data of the SME will be deleted by the administrator annually
+        Disclaimer - The data of the SME will be deleted by the administrator annually
     </footer>
 </body>
 </html>

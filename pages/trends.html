@@ -63,11 +63,11 @@
 
 
     <div class="navbar">
-        <img src="images/c6cafy-high-resolution-logo.png" alt="C6Cafy Logo" height="100" width="100">
+        <img src="/images/c6cafy-high-resolution-logo.png" alt="C6Cafy Logo" height="100" width="100">
         <div>
-            <a href="#">My Carbon Footprint</a>
-            <a href="#">Profile</a>
-            <a href="#">Calculator</a>
+            <a href="my_footprint.html">My Carbon Footprint</a>
+            <a href="profile.html">Profile</a>
+            <a href="carbon_calculator.html">Calculator</a>
         </div>
         <button class="logout">Log Out</button>
 
@@ -100,9 +100,12 @@
                 }
             }
         });
+        document.querySelector('.logout-btn').addEventListener('click', function() {
+            window.location.href = 'login_page.html';
+        });
     </script>
     <footer class="disclaimer-footer">
-        Disclaimers - The data of the SME will be deleted by the administrator annually
+        Disclaimer - The data of the SME will be deleted by the administrator annually
     </footer>
 </body>
 </html>

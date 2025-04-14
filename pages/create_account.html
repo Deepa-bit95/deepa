@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - C6Cafy</title>
+    <title>Create Account - C6Cafy</title>
     <style>
         /* Base Styles */
         body {
@@ -37,7 +37,7 @@
         }
 
         /* Login Container */
-        .login-container {
+        .Create Account-container {
             width: 100%;
             max-width: 400px;
             padding: 2rem;
@@ -100,9 +100,9 @@
     </style>
 </head>
 <body>
-    <div class="login-container">
-         <img src="images/c6cafy-high-resolution-logo.png" width="200" height="100" alt="C6Cafy Logo" align= centre>
-        <h1 style="color: #2E7D32; text-align: center; margin-bottom: 2rem;">Login</h1>
+    <div class="Create Account-container">
+         <img src="/images/c6cafy-high-resolution-logo.png" width="200" height="100" alt="C6Cafy Logo" align= centre>
+        <h1 style="color: #2E7D32; text-align: center; margin-bottom: 2rem;">Create Account</h1>
 
         <form id="loginForm">
             <div class="form-group">
@@ -114,23 +114,23 @@
                 <label for="userPassword">Password</label>
                 <input type="password" id="userPassword" placeholder="ash123" required>
             </div>
+            <div class="form-group">
+                <label for="userPassword">Re-typePassword</label>
+                <input type="password" id="userPassword" placeholder="ash123" required>
+            </div>
 
-            <button type="submit" class="btn btn-primary">Connect</button>
-            <button type="button" id="forgetPasswordButton" class="btn btn-secondary">Forgot Password</button>
+            <button type="submit" class="btn btn-primary">Create Account</button>
+
         </form>
     </div>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Login logic here
-            window.location.href = 'my_footprint.html'; // Redirect after login
+            window.location.href = 'login_page.html';
         });
 
-        document.getElementById('forgetPasswordButton').addEventListener('click', function() {
-            // Forgot password logic here
-            alert('Password reset instructions will be sent to your email.');
-        });
+
     </script>
 </body>
 </html>
