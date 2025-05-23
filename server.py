@@ -1,5 +1,5 @@
 import chevron
-import mariadb
+import pymysql
 from flask import Flask, request, session, Response
 
 # read all pages into a dictionary, key = page name, value = page content
@@ -36,7 +36,7 @@ def login():
     data = request.form
     username = data['username']
     password = data['password']
-    with mariadb.connect(**connection_parameters) as conn:
+    with pymysql.connect(**connection_parameters) as conn:
         with conn.cursor() as cursor:
             cursor.execute("SELECT username, password FROM users WHERE username = %s", (username,))
             result = cursor.fetchone()
