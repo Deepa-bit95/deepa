@@ -1,0 +1,50 @@
+import random
+
+def carbon_footprint(serving):
+    ingredient = []
+    n = int(input("Enter number of ingredients: "))
+
+    for i in range(n):
+        name = input("Enter name of ingredient {i + 1}: ")
+
+        # Get and validate weight
+        while True:
+            try:
+                weight = float(input(f"Enter weight (in kg) for {name}: "))
+                if weight <= 0:
+                    print("Please enter a value greater than 0.")
+                    continue
+                break
+            except ValueError:
+                print("Please enter a valid number.")
+
+        # Get and validate emission factor
+        while True:
+            try:
+                emission_factor = float(input(f"Enter emission factor (kg CO₂e per kg) for {name}: "))
+                if emission_factor < 0:
+                    print("Please enter a value greater than or equal to 0.")
+                    continue
+                break
+            except ValueError:
+                print("Please enter a valid number.")
+
+        ingredient.append({'name': name, 'weight': weight, 'emission_factor': emission_factor})
+
+    total_emissions = sum(p['weight'] * p['emission_factor'] for p in ingredient)
+
+    if serving <= 0:
+        print("Serving must be greater than 0.")
+        return None
+
+    return total_emissions / serving
+
+
+# Run the program
+try:
+    servings = int(input("Enter number of servings: "))
+    footprint = carbon_footprint(servings)
+    if footprint is not None:
+        print(f"\nTotal Carbon Footprint per Serving: {footprint:.2f} kg CO₂e")
+except ValueError:
+    print("Invalid number of servings.")
